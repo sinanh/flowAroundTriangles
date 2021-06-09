@@ -108,18 +108,12 @@ do
 
 							echo -e "Copy results into C_D folder.\n"
 							cd postProcessing/forces/*/.
-							cp forceCoeffs.dat ../../../C_D/
+							cp coefficient.dat ../../../C_D/
 							cd ../../..
 							rm -r postProcessing/forces/
-							mv "C_D/forceCoeffs.dat" "C_D/x1-${x1}_y1-${y1}_x2-${x2}_y2-${y2}_x3-${x3}_y3-${y3}_Re-${Re}.dat"
+							mv "C_D/coefficient.dat" "C_D/x1-${x1}_y1-${y1}_x2-${x2}_y2-${y2}_x3-${x3}_y3-${y3}_Re-${Re}.dat"
 
-							echo -e "Copy residuals into residuals folder.\n"
-							cd postProcessing/residuals/*/.
-							cp residuals.dat ../../../residuals/
-							cd ../../..
-							rm -r postProcessing/residuals/
-							mv "residuals/residuals.dat" "residuals/x1-${x1}_y1-${y1}_x2-${x2}_y2-${y2}_x3-${x3}_y3-${y3}_Re-${Re}.dat"
-							rm -r postProcessing
+			 
 
 							echo -e "Calculation done.\n"
 							cd ..
